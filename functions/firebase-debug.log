@@ -1,0 +1,63 @@
+[debug] [2024-02-05T16:34:12.350Z] ----------------------------------------------------------------------
+[debug] [2024-02-05T16:34:12.352Z] Command:       /usr/bin/node /usr/bin/firebase serve
+[debug] [2024-02-05T16:34:12.353Z] CLI Version:   13.1.0
+[debug] [2024-02-05T16:34:12.353Z] Platform:      linux
+[debug] [2024-02-05T16:34:12.353Z] Node Version:  v21.6.1
+[debug] [2024-02-05T16:34:12.353Z] Time:          Mon Feb 05 2024 09:34:12 GMT-0700 (Mountain Standard Time)
+[debug] [2024-02-05T16:34:12.353Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-02-05T16:34:12.445Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-05T16:34:12.445Z] > authorizing via signed-in user (om.srswt@gmail.com)
+[debug] [2024-02-05T16:34:12.446Z] [iam] checking project firetest-bogz for permissions ["firebase.projects.get"]
+[debug] [2024-02-05T16:34:12.447Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/firetest-bogz:testIamPermissions [none]
+[debug] [2024-02-05T16:34:12.447Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/firetest-bogz:testIamPermissions x-goog-quota-user=projects/firetest-bogz
+[debug] [2024-02-05T16:34:12.447Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/firetest-bogz:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-02-05T16:34:12.567Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/firetest-bogz:testIamPermissions 200
+[debug] [2024-02-05T16:34:12.568Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/firetest-bogz:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-02-05T16:34:12.568Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/firetest-bogz [none]
+[debug] [2024-02-05T16:34:12.885Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/firetest-bogz 200
+[debug] [2024-02-05T16:34:12.885Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/firetest-bogz {"projectId":"firetest-bogz","projectNumber":"412382821949","displayName":"firetest-bogz","name":"projects/firetest-bogz","resources":{"hostingSite":"firetest-bogz"},"state":"ACTIVE","etag":"1_05ac7e67-927b-4383-a3bb-e53c9c2f2c5d"}
+[info] 
+[info] === Serving from '/home/bogz/code/webdev-2024'...
+[info] 
+[debug] [2024-02-05T16:34:12.896Z] defaultcredentials: writing to file /home/bogz/.config/firebase/om_srswt_gmail.com_application_default_credentials.json
+[debug] [2024-02-05T16:34:12.901Z] Setting GAC to /home/bogz/.config/firebase/om_srswt_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /home/bogz/.config/firebase/om_srswt_gmail.com_application_default_credentials.json"}}
+[debug] [2024-02-05T16:34:12.903Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/firetest-bogz/adminSdkConfig [none]
+[debug] [2024-02-05T16:34:13.077Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/firetest-bogz/adminSdkConfig 200
+[debug] [2024-02-05T16:34:13.077Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/firetest-bogz/adminSdkConfig {"projectId":"firetest-bogz","storageBucket":"firetest-bogz.appspot.com"}
+[info] i  functions: Watching "/home/bogz/code/webdev-2024/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/home/bogz/code/webdev-2024/functions\" for Cloud Functions..."}}
+[debug] [2024-02-05T16:34:13.121Z] Validating nodejs source
+[debug] [2024-02-05T16:34:13.752Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-05T16:34:13.752Z] Building nodejs source
+[debug] [2024-02-05T16:34:13.753Z] Failed to find version of module node: reached end of search path /home/bogz/code/webdev-2024/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "18" doesn't match your global version "21". Using node@21 from host. 
+[debug] [2024-02-05T16:34:13.755Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-05T16:34:13.758Z] Found firebase-functions binary at '/home/bogz/code/webdev-2024/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8013
+
+[debug] [2024-02-05T16:34:14.033Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"},"flashBriefing":{"availableMemoryMb":null,"timeoutSeconds":15,"minInstances":null,"maxInstances":10,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"flashBriefing"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: helloWorld, flashBriefing. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld, flashBriefing."}}
+[info] ✔  functions[us-central1-helloWorld]: http function initialized (http://localhost:5000/firetest-bogz/us-central1/helloWorld). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/firetest-bogz/us-central1/helloWorld)."}}
+[info] ✔  functions[us-central1-flashBriefing]: http function initialized (http://localhost:5000/firetest-bogz/us-central1/flashBriefing). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/firetest-bogz/us-central1/flashBriefing)."}}
